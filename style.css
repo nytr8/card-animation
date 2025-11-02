@@ -1,0 +1,105 @@
+@font-face {
+    font-family: cards;
+    src: url(/Coolvetica\ Rg.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cards;
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+    font-weight: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+    height: 500px;
+    width: 450px;
+    background: radial-gradient(circle, rgb(255, 228, 118) 23%, rgba(198, 119, 0, 0.925) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.527);
+    margin: 20px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.box img {
+    border: 3px solid rgb(255, 255, 255);
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    transform: scale(2);
+}
+
+.bottom h1 {
+    text-transform: capitalize;
+    margin-top: 30px;
+    color: rgb(72, 72, 72);
+    font-size: 50px;
+    text-align: center;
+}
+
+.bottom p {
+    width: 90%;
+    margin-top: 20px;
+    color: rgba(72, 72, 72, 0.6);
+    font-size: 25px;
+    text-align: center;
+}
+
+.box button {
+    margin: 40px;
+    border: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(87, 87, 255);
+}
+
+.box button:hover {
+    background-color: rgb(0, 0, 132);
+    cursor: pointer;
+}
+
+.bottom {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom: -80%;
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(37, 37, 37) 100%);
+    transition: all ease 0.3s;
+}
+
+.box:hover .bottom {
+    transform: translatey(-100%);
+}
+
+.box:hover img {
+    margin-bottom: 300px;
+    transform: scale(1);
+    border: 4px solid rgb(255, 60, 112);
+}
